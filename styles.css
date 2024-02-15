@@ -1,20 +1,90 @@
-#logoBar{
-  width: 30vw;
-  height: 100vh;
+#logoBar {
+    width: 30vw;
+    height: 20%;
 }
-#siteLogo{
-  width: 100%;
-}
-body {
-  display: flex;
-}
-#staffGallery{
-  width: 70vw;
-  display: inherit;
 
+#siteLogo {
+    width: 100%;
 }
-.galleryImage{
-  width: 100%;
-  height: auto;
-  height: 300px;
+
+body {
+    display: flex;
+    background-color: #ffa500;
+}
+
+#staffGallery {
+    width: 70vw;
+    display: inherit;
+}
+
+.galleryImage {
+    width: 100%;
+    height: auto;
+    height: 300px;
+    align-items: center;
+}
+
+@media (max-width: 600px) {}
+
+h1 {
+    color: red;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+h3 {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+
+/* On mouse-over, add a deeper shadow */
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* Add some padding inside the card container */
+
+.container {
+    padding: 2px 16px;
+}
+
+
+/* .container {
+    display: flex;
+    flex-direction: column;
+} */
+
+container {
+    flex-direction: row;
+    /* Change flex direction to row */
+    flex-wrap: wrap;
+    display: flex;
+    /* Allow items to wrap */
+}
+
+@media (max-width: 600px) {
+    .card {
+        align-items: stretch;
+        flex-wrap: wrap;
+        /* Set width to 50% to make two items per row */
+    }
+    #staffGallery {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
 }
